@@ -57,11 +57,27 @@
              team_name = str(constants.TEAMS[team_choice-1])
              selected_team = teams[team_choice-1]
              player_list = [player['name'] for player in selected_team]
+             def experience(selected_team):
+                 experienced_players = []
+                 for player in selected_team:
+                     if player['experience']:
+                         experienced_players.append(player)
+                 return experienced_players
+             def inexperience(selected_team):
+                 inexperienced_players = []
+                 for player in selected_team:
+                     if player['experience'] == False:
+                         inexperienced_players.append(player)
+                 return inexperienced_players
+             experienced_players = experience(selected_team)
+             inexperienced_players = inexperience(selected_team)
              print(team_name + " stats")
              print("---------------")
              print("Total players: {}".format(len(selected_team)))
              print("Players on team: ")
              print(', '.join(player_list))
+             print("Experienced players: {}".format(len(experienced_players)))
+             print("Inexperienced players: {}".format(len(inexperienced_players)))
              continue_option = input("Press ENTER to continue...")
              if continue_option == '':
                  display()
