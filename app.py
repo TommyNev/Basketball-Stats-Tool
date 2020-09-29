@@ -1,5 +1,4 @@
-# application.py 
-Basketball-Stats-Tool
+# Basketball-Stats-Tool
  Second project
  import constants
  import copy
