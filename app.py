@@ -1,5 +1,4 @@
 # Basketball-Stats-Tool
- Second project
  import constants
  import copy
  import sys
